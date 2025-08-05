@@ -7,20 +7,41 @@
 <style>
 body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 25px;
     background-color: rgb(56, 5, 5);
     color: wheat;
     text-align: center;
-    padding: 25px;
+    margin-top: -20px;
+    padding: -10px;
     }
 
 </style>
 <body>
-<p>"Deus me criou para prestar um serviço definido. Ele me confiou uma obra que não confiou a ninguém mais. Eu tenho a minha missão. Talvez nunca a conheça nesta vida, mas serei dela informado na próxima. Sou um elo numa corrente, um laço de conexão entre pessoas. Deus não me criou em vão."</p>    
-<img src="Imagens/St-J-H-Newman-circular.png" alt="St. J. H. Newman" width="350" 
-height="350"
+       <h1>Breve meditação</h1>
+<p style="margin-top: -10px;">"Deus me criou para prestar um serviço definido. Ele me confiou uma obra que não confiou a ninguém mais. Eu tenho a minha missão. Talvez nunca a conheça nesta vida, mas serei dela informado na próxima. Sou um elo numa corrente, um laço de conexão entre pessoas. Deus não me criou em vão."</p>    
+<img src="Imagens/St-J-H-Newman-circular.png" alt="St. J. H. Newman" width="300" 
+height="300"
 style="display: block;
 margin: auto;">
-<p style="margin-top: -02px;">São John Henry Newman, doutor da Igreja.</p>
+<p style="margin-top: 5px;">São John Henry Newman, doutor da Igreja.</p>
+<footer style="margin-top: 10px;">
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <button id="likeBtn" style="background: none; border: none; cursor: pointer;">
+            <span style="font-size: 2em;">❤️</span>
+        </button>
+        <span id="likeCount" style="font-size: 1.5em; color: wheat; margin-left: 10px;">0</span>
+    </div>
+    <p style="font-size: 0.8em; color: gray;">© 2024 JHN. Todos os direitos reservados.</p>
+</footer>
+<script>
+        let count = 0;
+        const likeBtn = document.getElementById('likeBtn');
+        const likeCount = document.getElementById('likeCount');
+
+        likeBtn.addEventListener('click', () => {
+            count++;
+            likeCount.textContent = count;
+        });
+    </script>
 </body>
 </html>
