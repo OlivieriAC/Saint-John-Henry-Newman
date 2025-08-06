@@ -14,9 +14,40 @@ body {
     margin-top: -20px;
     padding: -10px;
     }
-    #shareBtn span {
-        font-size: 1.5em; /* Ajuste o tamanho do ícone */
-    }
+    .interaction-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px; /* Adiciona um espaço abaixo dos botões */
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: wheat;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+.social-share-buttons {
+            display: none; /* Escondidos por padrão */
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-share-buttons a {
+            color: wheat;
+            font-size: 2em;
+            text-decoration: none;
+        }
+#hidden-share-link {
+            display: none;
+        }
 </style>
 <body>
        <h1>Breve meditação</h1>
