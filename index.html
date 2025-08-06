@@ -14,7 +14,9 @@ body {
     margin-top: -20px;
     padding: -10px;
     }
-
+    #shareBtn span {
+        font-size: 1.5em; /* Ajuste o tamanho do ícone */
+    }
 </style>
 <body>
        <h1>Breve meditação</h1>
@@ -41,6 +43,25 @@ margin: auto;">
         likeBtn.addEventListener('click', () => {
             count++;
             likeCount.textContent = count;
+        });
+
+        // Código para o botão de compartilhar
+        const shareBtn = document.getElementById('shareBtn');
+        
+        shareBtn.addEventListener('click', () => {
+            // Verifica se a Web Share API é suportada pelo navegador
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title, // Pega o título da sua página
+                    text: 'Citação inspiradora de São John Henry Newman.', // Um texto para compartilhar
+                    url: window.location.href // Pega o URL da sua página atual
+                })
+                .then(() => console.log('Conteúdo compartilhado com sucesso!'))
+                .catch((error) => console.log('Erro ao compartilhar:', error));
+            } else {
+                // Caso o navegador não suporte, um fallback pode ser adicionado
+                alert('A função de compartilhamento não é suportada por este navegador.');
+            }
         });
     </script>
 </body>
